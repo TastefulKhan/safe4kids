@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MainCard : MonoBehaviour {
 
@@ -9,7 +10,7 @@ public class MainCard : MonoBehaviour {
 
 
 
-    public void OnMouseDown()
+    public void OnClick()
     {
 
         if(Card_Back.activeSelf && controller.canReveal)
@@ -37,7 +38,7 @@ public class MainCard : MonoBehaviour {
 
     {
         _id = id;
-        GetComponent<SpriteRenderer>().sprite = image;
+        GetComponent<Image>().sprite = image;
 
     }
 

@@ -1,19 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class MainCard : MonoBehaviour {
+public class MainCard : MonoBehaviour
+{
 
     [SerializeField] private SceneController controller;
     [SerializeField] private GameObject Card_Back;
 
 
 
-    public void OnClick()
+    public void OnMouseDown()
     {
 
-        if(Card_Back.activeSelf && controller.canReveal)
+        if (Card_Back.activeSelf && controller.canReveal)
         {
 
             Card_Back.SetActive(false);
@@ -38,7 +38,7 @@ public class MainCard : MonoBehaviour {
 
     {
         _id = id;
-        GetComponent<Image>().sprite = image;
+        GetComponent<SpriteRenderer>().sprite = image;
 
     }
 
